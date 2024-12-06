@@ -126,41 +126,78 @@ class FitnessPage extends StatelessWidget {
                   },
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black, width: 1.5),
-                    color: const Color.fromARGB(255, 165, 244, 20)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    StyledButton(
-                      onPressed: () {
-                        showDialog(
-                          context: context,
-                          builder: (context) => SetGoalDialog(),
-                        );
-                      },
-                      child: const Text('Set Goal'),
-                    ),
-                    StyledButton(
-                      onPressed: () {
-                        showDialog(
-                          context: context,
-                          builder: (context) => LogCaloriesDialog(),
-                        );
-                      },
-                      child: const Text('Log Calories'),
-                    ),
-                    StyledButton(
-                      onPressed: () => context.push('/friends'),
-                      child: const Text('Friends'),
-                    ),
-                  ],
-                ),
-              ),
+              // Container(
+              //   decoration: BoxDecoration(
+              //       border: Border.all(color: Colors.black, width: 1.5),
+              //       color: const Color.fromARGB(255, 165, 244, 20)),
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              //     children: [
+              //       StyledButton(
+              //         onPressed: () {
+              //           showDialog(
+              //             context: context,
+              //             builder: (context) => SetGoalDialog(),
+              //           );
+              //         },
+              //         child: const Text('Set Goal'),
+              //       ),
+              //       StyledButton(
+              //         onPressed: () {
+              //           showDialog(
+              //             context: context,
+              //             builder: (context) => LogCaloriesDialog(),
+              //           );
+              //         },
+              //         child: const Text('Log Calories'),
+              //       ),
+              //       StyledButton(
+              //         onPressed: () => context.push('/friends'),
+              //         child: const Text('Friends'),
+              //       ),
+              //     ],
+              //   ),
+              // ),
             ],
           );
         },
+      ),
+
+      floatingActionButton: const FloatingActionButton(
+        onPressed: null,
+        child: Icon(Icons.calendar_month),
+      ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+            border: Border.all(color: Colors.black, width: 1.5),
+            color: const Color.fromARGB(255, 165, 244, 20)),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            StyledButton(
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => SetGoalDialog(),
+                );
+              },
+              child: const Text('Set Goal'),
+            ),
+            StyledButton(
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => LogCaloriesDialog(),
+                );
+              },
+              child: const Text('Log Calories'),
+            ),
+            StyledButton(
+              onPressed: () => context.push('/friends'),
+              child: const Text('Friends'),
+            ),
+          ],
+        ),
       ),
     );
   }
