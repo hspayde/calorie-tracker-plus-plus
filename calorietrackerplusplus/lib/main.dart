@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'app_state.dart';
+import 'pages/calendar_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -111,6 +112,11 @@ final _router = GoRouter(
             builder: (context, state) {
               return const FitnessPage();
             }),
+        GoRoute(
+          path: 'calendar',
+          builder: (context, state) {
+            return const CalendarPage();
+          }),
       ],
     ),
   ],
